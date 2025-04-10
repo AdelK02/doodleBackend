@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173","https://doodlebackend-fw0e.onrender.com"],
+    origin: ["http://localhost:5173","https://doodl-self.vercel.app"],
     methods: ["GET", "POST"],
   },
 });
