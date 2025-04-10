@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173","https://doodlebackend-fw0e.onrender.com"],
     methods: ["GET", "POST"],
   },
 });
@@ -137,7 +137,7 @@ io.on("connection", (socket) => {
         // Wait 3 seconds before moving to the next turn
         setTimeout(() => {
             nextTurn(lobbyId);
-        }, 5000);
+        }, 7000);
     }
 });
 
